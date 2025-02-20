@@ -1,95 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>pi-pass.xyz Graph</title>
-<style>
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: lightblue; /* Blue body */
-}.top-bar {
-  background-color: yellow;
-  text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi-Pass</title>
+    <style>
+        body {
+            background-color: darkblue;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0; 
+            padding-top: 50px; 
+        }
 
-#graph-container {
-  width: 80%;
-  height: 400px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  position: relative; /* Needed for absolute positioning of points */
-}.graph-point {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  cursor: pointer;
-}
+        .top-bar {
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+        }
 
-#controls {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#controls input[type="range"] {
-  width: 300px;
-}
-
-</style>
+        .content {
+          padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="top-bar">pi-pass.xyz</div>
+    <div class="top-bar">
+        pi-pass.xyz
+    </div>
 
-<div id="graph-container">
-  </div>
-
-<div id="controls">
-  <label for="point-x">X-Position:</label>
-  <input type="range" id="point-x" min="0" max="100" value="50">
-  <label for="point-y">Y-Position:</label>
-  <input type="range" id="point-y" min="0" max="100" value="50">
-  <button id="add-point">Add Point</button>
-  <button id="clear-graph">Clear Graph</button>
-</div>
-
-<script>
-const graphContainer = document.getElementById('graph-container');
-const pointXInput = document.getElementById('point-x');
-const pointYInput = document.getElementById('point-y');
-const addPointButton = document.getElementById('add-point');
-const clearGraphButton = document.getElementById('clear-graph');
-
-let points =; // Array to store point data
-
-function createPoint(x, y) {
-  const point = document.createElement('div');
-  point.className = 'graph-point';
-  point.style.left = `${x}%`;
-  point.style.bottom = `${y}%`; // Bottom instead of top for typical graph orientation
-  graphContainer.appendChild(point);
-  return point;
-}
-
-function addPoint() {
-  const x = pointXInput.value;
-  const y = pointYInput.value;
-  points.push({ x: x, y: y });
-  createPoint(x, y);
-}
-
-function clearGraph(){
-    graphContainer.innerHTML = "";
-    points =;
-}
-
-addPointButton.addEventListener('click', addPoint);
-clearGraphButton.addEventListener('click', clearGraph);
-
-</script>
+    <div class="content">
+        <p>Buy the pi pass today, go to the blue building at spawn</p>
+    </div>
 
 </body>
 </html>

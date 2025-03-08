@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pi Pass</title>
+    <title>Pi Pass Season</title>
     <style>
         body {
-            background-color: lightgrey;
-            color: lightgrey; 
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
             margin: 0;
-            padding-top: 70px; 
+            font-family: sans-serif;
+            background-color: white;
         }
 
         .top-bar {
-            background-color: white;
-            color: black;
+            background-color: #99CC32; /* Minecraft Lime Green */
+            color: white;
+            padding: 10px 0;
             text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+            font-family: 'Minecraft', monospace; /* Fallback to monospace */
+            font-size: 2em; /* Adjust size as needed */
         }
 
-
-        p {
-            color: black; 
+        .content {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
         }
+
+        /* Add Minecraft font (if available) */
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('path/to/Minecraft.ttf') format('truetype'); /* Replace with your font file path */
+            font-weight: normal;
+            font-style: normal;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        Season 1 Pi Pass
+        Pi Pass season
     </div>
 
     <div class="content">
-        <p>Buy the Pi Pass today, go to the blue building at spawn.</p>
-        <img src="pipass.png" alt="Pi Pass Image">
-        <p>About Season 1:</p>
-        <img src="PiPassSeason1.png" alt="Pi Pass Season 1">
+        dev
     </div>
 
+    <script>
+        //Optional javascript, if needed.
+    </script>
 </body>
 </html>
+
